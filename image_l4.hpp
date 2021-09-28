@@ -36,14 +36,14 @@ unsigned char get_pixel(ImagePPM image, int row, int col, int color) {
     unsigned char r = image.data[address];
     unsigned char g = image.data[address + 1];
     unsigned char b = image.data[address + 2];
-std::cout<<"GP "<<(int)r<<" "<<(int)g<<" "<<(int)b<<std::endl;
+//std::cout<<"GP "<<(int)r<<" "<<(int)g<<" "<<(int)b<<std::endl;
     if (color == 0) { return r; }
     if (color == 1) { return g; }
     if (color == 2) { return b; }
     if (color == 3) {
         int yi = r + g + b;
         unsigned char y = yi / 3;
-std::cout<<"GP y="<<(int)y<<std::endl;
+//std::cout<<"GP y="<<(int)y<<std::endl;
 
         return y;
     }
